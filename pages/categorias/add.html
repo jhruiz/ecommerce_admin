@@ -1,0 +1,59 @@
+<!-- Preloader -->
+<div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="../../dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+    </div>
+    
+    <div class="card" id="content-categorias">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-12">
+                    <h4>
+                        <i class="nav-icon fas fa-object-group"></i>
+                        Nueva categoria                                   
+                    </h4>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card-body">
+            
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-signature"></i></span>
+                </div>
+                <input type="text" id="descripcion" class="form-control" placeholder="Descripcion">                
+            </div>
+    
+        </div>     
+    
+    </div>
+    
+    <div class="card" id="content-categorias">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-12">
+                    <h4>
+                        <i class="nav-icon fas fa-object-group"></i>
+                        Grupos                                   
+                    </h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-body">
+
+            <!-- card de grupos -->      
+            <div class="col-sm-12">
+                <!-- checkbox -->
+                <div class="form-group clearfix" id="grupos"></div>       
+            </div>                  
+
+            <div class="col-12 float-right">
+                <button type="button" class="btn btn-primary float-right" onclick="crearCategoria()">Guardar</button>
+            </div> 
+    
+        </div>        
+    
+    </div>
+    
+    <script src="../../build/js/Categorias/add.js"></script>

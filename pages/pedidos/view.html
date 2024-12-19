@@ -1,0 +1,79 @@
+
+  <section class="invoice">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="page-header">
+            <input type="hidden" id="pedidoId" value="">
+            Torque Racing
+            <small class="float-right" id="fechaActual"></small>
+          </h2>
+        </div>
+      </div>
+
+      <div class="row invoice-info">
+        <div class="col-sm-6 invoice-col">
+          <address>
+            <b>Pedido #<span id="codigo-factura"></span></b><br>
+            <b>Nombre cliente: </b><span id="nombre-cliente"></span><br>
+            <b>Identificación cliente: </b><span id="ident-cliente"></span><br>
+            <b>Fecha pedido: </b><span id="fecha-pedido"></span><br>
+          </address>
+        </div>
+      </div>
+    </div>
+
+    <!-- Table row -->
+    <div class="row">
+      <div class="col-12 table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>                        
+              <th>Item</th>
+              <th class="text-center">Cant.</th>
+              <th class="text-right">Vlr. Unit.</th>
+              <th class="text-center">Imp. %</th>
+              <th class="text-right">Subtotal</th>
+            </tr>
+          </thead>
+          <tbody id="detalle-pedido"></tbody>
+          <tbody id="detalle-ttles"></tbody>
+        </table>
+      </div>
+
+      <div class="container-fluid no-print ms-1 px-2">      
+        <a title="Imprimir Factura" href="#" onclick="imprimirFactura();return false;" rel="noopener" class="btn btn-default"><i class="fas fa-print"></i>Print</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="invoice no-print" style="margin-top: 15px; margin-bottom: 15px;">
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-6">
+          <!-- combo states -->
+          <div class="form-group" id="cmb-states"></div>
+        </div>
+        
+        <div class="col-6">
+          <form method="POST" action="" enctype="multipart/form-data">
+            <!-- input documentos -->
+            <div class="form-group">
+              <label for="doc_guia">Guia de envío</label>
+              <div class="input-group">
+                <div class="custom-file">
+                  <input id="doc_guia" type="file" name="doc_guia" class="files-upload" onchange="cargarGuia(this)">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      
+      </div>
+    </div>
+  </section>
+  <script src="../../build/js/Pedidos/view.js"></script>
+  <script src="../../build/js/Pedidos/edit.js"></script>
+

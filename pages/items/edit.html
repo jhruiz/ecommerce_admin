@@ -1,0 +1,136 @@
+<!-- Preloader -->
+<div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="../../dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-12">
+                <h4>
+                    <i class="nav-icon fas fa-info-circle"></i>
+                    Datos del producto                                   
+                </h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-body">
+
+        <input id="itemId" name="itemId" type="hidden" value="">
+
+        <div class="input-group col-md-12 mb-3">
+            <div class="input-group col-md-6">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-signature"></i></span>
+                </div>
+                <input type="text" id="referencia" class="form-control" placeholder="Referencia">
+            </div>
+            <div class="input-group col-md-6">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-signature"></i></span>
+                </div>
+                <input type="text" id="descripcion" class="form-control" placeholder="Descripcion">
+            </div>
+        </div>
+
+        <div class="input-group col-md-12 mb-3">
+            <div class="input-group col-md-6">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-signature"></i></span>
+                </div>
+                <input type="text" id="grupo" class="form-control" placeholder="Descripcion">
+            </div>
+            <div class="input-group col-md-6">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-signature"></i></span>
+                </div>
+                <input type="text" id="linea" class="form-control" placeholder="Grupo">
+            </div>
+        </div>
+
+        <div class="input-group col-md-12 mb-3">
+            <div class="input-group col-md-6">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-signature"></i></span>
+                </div>
+                <input type="text" id="saldo" class="form-control" placeholder="Saldo Actual">
+            </div>
+            <div class="input-group col-md-6">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-signature"></i></span>
+                </div>
+                <input type="text" id="unidadF" class="form-control" placeholder="Unidad Factor">
+            </div>
+        </div>
+    </div>   
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-12">
+                <h4>
+                    <i class="nav-icon fas fa-key"></i>
+                    Palabras clave                           
+                </h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-body">
+
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="descNuevaPalabra" autocomplete="off">
+            <span class="input-group-append">
+              <button type="button" class="btn btn-primary btn-flat" onclick="agregarPalabraClave()">Agregar</button>
+            </span>
+        </div>        
+
+        <div class="col-md-12">
+            <div class="callout callout-success">
+                <h5 id="keydescription"></h5>
+            </div>
+        </div>
+
+        <div class="col-md-12" id="oldKeyWords">
+        </div>
+
+        <div class="col-md-12" id="newKeyWords">
+        </div>
+    </div>   
+
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-12">
+                <h4>
+                    <i class="nav-icon fas fa-images"></i>
+                    Imágenes                                  
+                </h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-body">
+        <form method="POST" action="" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="item_imgs">Cargar imagenes</label>
+                <div class="input-group">
+                    <div class="custom-file">
+                        <input id="item_imgs" type="file" name="item_imgs" class="files-upload" onchange="validarArchivos(this)" multiple>                      
+                    </div>
+                    <button type="button" class="btn btn-primary float-right" onclick="cargarImagenes()">Cargar</button>
+                </div>
+            </div>  
+            
+            <div class="row" id="dv_imagenes">
+            </div> 
+        </form>
+    </div>   
+
+</div>
+
+<script src="../../build/js/Items/edit.js"></script>
